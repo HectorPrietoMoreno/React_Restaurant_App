@@ -8,7 +8,7 @@ class BasicComponent extends React.Component {
       text: 'Hello '
     };
   }
-
+  
   render() {
     return (<div className="BasicComponent">
       <h2>{this.state.text}{this.props.name}</h2>
