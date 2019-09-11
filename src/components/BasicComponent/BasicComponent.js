@@ -1,12 +1,19 @@
 import React from 'react';
 import './BasicComponent.css';
 
-function BasicComponent() {
-  return (
-    <div className="BasicComponent">
-      <h2>Hello Basic Component!</h2>
-    </div>
-  );
+class BasicComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: 'Hello '
+    };
+  }
+
+  render() {
+    return (<div className="BasicComponent">
+      <h2>{this.state.text}{this.props.name}</h2>
+    </div>);
+  }
 }
 
 export default BasicComponent;
